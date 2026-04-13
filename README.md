@@ -29,14 +29,30 @@ This repository comes pre-configured with everything you need:
 
 ### Setup
 
-1. **Fork this repository** to your own GitHub account, then clone your fork:
+1. **Clone this repository** and push it to a new **private repository** on your GitHub account:
 
    ```bash
-   git clone <your-fork-url>
+   git clone https://github.com/Bowler-Plastics/assessment.git
    cd assessment
+
+   # Remove the existing git history and start fresh
+   rm -rf .git
+   git init
+   git add .
+   git commit -m "Initial commit"
+
+   # Link to your new private repository and push
+   git remote add origin <your-new-private-repo-url>
+   git branch -M main
+   git push -u origin main
    ```
 
-2. **Run the setup script:**
+2. **Add the reviewer to your repository:**
+
+   Add **[RupertBothma](https://github.com/RupertBothma)** as a collaborator to your new private repository. Please do this as one of your first steps!
+   *Note: We would like to see commits pushed to the repo from the start to see how the project is progressing.*
+
+3. **Run the setup script:**
 
    ```bash
    composer setup
@@ -44,7 +60,7 @@ This repository comes pre-configured with everything you need:
 
    This will install PHP and Node dependencies, generate an app key, run migrations, and build frontend assets.
 
-3. **Start the development servers:**
+4. **Start the development servers:**
 
    In one terminal:
    ```bash
@@ -56,7 +72,7 @@ This repository comes pre-configured with everything you need:
    npm run dev
    ```
 
-4. **Open your browser** at [http://localhost:8000](http://localhost:8000)
+5. **Open your browser** at [http://localhost:8000](http://localhost:8000)
 
 ### Running Tests
 
